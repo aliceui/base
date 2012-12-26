@@ -5,7 +5,7 @@
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
     color:#000;background:#fff;
-    -webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
@@ -135,14 +135,14 @@ body .fn-hide {
 }
 
 /* 单行文字溢出时出现省略号，需设定宽度 */ 
-.text-overflow {
+.fn-text-overflow {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 /* 简单的渐变 */
-.sl-linear {
+.fn-linear {
     background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
     background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
@@ -151,7 +151,7 @@ body .fn-hide {
 }
 
 /* 浅色的渐变 */
-.sl-linear-light {
+.fn-linear-light {
     background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9));
     background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
@@ -160,9 +160,16 @@ body .fn-hide {
 }
 
 /* 人民币符号 */
-.rmb {
+.fn-rmb {
     font-size: .75em;
     font-family: arial;
     font-style: normal;
     padding-right: 4px;
 }
+
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust {
+    -webkit-text-size-adjust: none;
+}
+

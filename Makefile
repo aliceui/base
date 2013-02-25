@@ -1,4 +1,4 @@
-THEME = $(HOME)/.spm/themes/arale
+THEME = $(HOME)/.spm/themes/alice
 
 build-doc:
 	@nico build -v -C $(THEME)/nico.js

@@ -35,8 +35,12 @@
 
     // for alice
     for(var dep in data.dependencies) {
-        seajs.use(dep);
+        // 如果依赖的是样式模块
+        if (data.dependencies[dep].indexOf('.css') > 0) {
+            seajs.use(dep);
+        }
     }
+
   })();
 </script>
     <!--[if lt IE 9]>
@@ -50,7 +54,15 @@
         <h1><a href="./">Base</a><sup class="package-root"><a href="/">alice</a></sup></h1>
         <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#alice-base" title="点击查看此组件发布情况">1.0.0</a></p>
         <p class="description">支付宝全局 reset 样式</p>
+        <p class="keywords" style="display: none;"></p>
         <a class="source" href="https://github.com/aliceui/base" target="_blank">View the Project</a>
+<ul id="module-output"> 
+</ul>
+<div id="output-card">
+    <h3>alice/base/1.0.0/<a target="_blank" id="output-file"></a></h3>
+    <p>这是模块的输出文件，请 require 或 seajs.use 以上 ID 来使用本文件，具体 API 请阅读文档。</p>
+</div>
+
       </aside>
       <div id="content-wrapper">
         <div id="content">
@@ -79,11 +91,11 @@
     </div>
     <div id="footer-wrapper">
       <footer>
-        <p class="powered">
-        <a href="http://aralejs.org">Arale</a> •
-        <a href="http://aliceui.org">Alice</a> •
-        <a href="https://github.com/spmjs/spm">spm</a> •
-        <a href="http://lab.lepture.com/nico/">nico</a>
+        <p class="powered"><a href="http://aralejs.org">Arale</a> •
+<a href="http://aliceui.org">Alice</a> •
+<a href="http://seajs.org">SeaJS</a> •
+<a href="https://github.com/spmjs/spm">spm</a> •
+<a href="http://lab.lepture.com/nico/">nico</a>
         </p>
       </footer>
     </div>

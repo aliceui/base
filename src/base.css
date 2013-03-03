@@ -26,7 +26,7 @@ audio,canvas,video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body,button,input,select,textarea {
-    font:12px/1.5 tahoma,arial,Hiragino Sans GB,\5b8b\4f53;
+    font:12px/1.5 tahoma,arial,Hiragino Sans GB,"Microsoft Yahei",\5b8b\4f53;
 }
 input,select,textarea {
     font-size:100%;
@@ -161,7 +161,6 @@ body .fn-hide {
 
 /* 人民币符号 */
 .fn-rmb {
-    font-size: .75em;
     font-family: arial;
     font-style: normal;
     padding-right: 4px;

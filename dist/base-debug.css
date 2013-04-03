@@ -1,5 +1,4 @@
-
-/** alice/base/1.0.0/base.css **/
+/*! define alice/base/1.0.0/base-debug.css */
 /* alice.base 样式模块 */
 
 @charset "utf-8";
@@ -96,7 +95,6 @@ sub, sup {
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-
 /* 让链接在 hover 状态下显示下划线 */
 a:hover {
     text-decoration:underline;
@@ -168,9 +166,7 @@ body .fn-hide {
     padding-right: 4px;
 }
 
-
 /* chrome 下字体过小的问题 */
 .fn-webkit-adjust {
     -webkit-text-size-adjust: none;
 }
-

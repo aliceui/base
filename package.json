@@ -1,6 +1,6 @@
 {
     "name": "base",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "family": "alice",
     "description": "支付宝全局 reset 样式",
     "homepage": "http://aliceui.org/base",

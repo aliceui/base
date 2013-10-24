@@ -1,7 +1,5 @@
 /* alice.base 样式模块 */
 
-@charset "utf-8";
-
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
     color:#000;background:#fff;
@@ -124,12 +122,13 @@ ins,a {
 }
 
 /* 隐藏, 通常用来与 JS 配合 */
-body .fn-hide {
+.fn-hide {
     display:none;
 }
 
 /* 设置内联, 减少浮动带来的bug */
-.fn-left,.fn-right {
+.fn-left,
+.fn-right {
     display:inline;
 }
 .fn-left {
@@ -176,4 +175,3 @@ body .fn-hide {
 .fn-webkit-adjust {
     -webkit-text-size-adjust: none;
 }
-

@@ -108,6 +108,15 @@ ins,a {
     text-decoration:none;
 }
 
+/* 代码字体 */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
 /* 清理浮动 */
 .fn-clear:after {
     visibility:hidden;

@@ -1,7 +1,5 @@
-/*! define alice/base/1.0.1/base-debug.css */
+/*! define alice/base/1.0.2/base-debug.css */
 /* alice.base 样式模块 */
-
-@charset "utf-8";
 
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
@@ -111,6 +109,15 @@ ins,a {
     text-decoration:none;
 }
 
+/* 代码字体 */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
 /* 清理浮动 */
 .fn-clear:after {
     visibility:hidden;
@@ -125,12 +132,13 @@ ins,a {
 }
 
 /* 隐藏, 通常用来与 JS 配合 */
-body .fn-hide {
+.fn-hide {
     display:none;
 }
 
 /* 设置内联, 减少浮动带来的bug */
-.fn-left,.fn-right {
+.fn-left,
+.fn-right {
     display:inline;
 }
 .fn-left {
@@ -153,6 +161,7 @@ body .fn-hide {
     background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
     background:-o-linear-gradient(top, #fcfcfc, #f1f1f1);
+    background:-ms-linear-gradient(top, #fcfcfc, #f1f1f1);
     background: linear-gradient(top, #fcfcfc, #f1f1f1);
 }
 
@@ -162,6 +171,7 @@ body .fn-hide {
     background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
     background:-o-linear-gradient(top, #fcfcfc, #f9f9f9);
+    background:-ms-linear-gradient(top, #fcfcfc, #f9f9f9);
     background: linear-gradient(top, #fcfcfc, #f9f9f9);
 }
 

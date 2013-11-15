@@ -161,7 +161,7 @@ samp {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
     background:-o-linear-gradient(top, #fcfcfc, #f1f1f1);
     background:-ms-linear-gradient(top, #fcfcfc, #f1f1f1);
-    background: linear-gradient(top bottom, #fcfcfc, #f1f1f1);
+    background: linear-gradient(to bottom, #fcfcfc, #f1f1f1);
 }
 
 /* 浅色的渐变 */
@@ -171,7 +171,7 @@ samp {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
     background:-o-linear-gradient(top, #fcfcfc, #f9f9f9);
     background:-ms-linear-gradient(top, #fcfcfc, #f9f9f9);
-    background: linear-gradient(top bottom, #fcfcfc, #f9f9f9);
+    background: linear-gradient(to bottom, #fcfcfc, #f9f9f9);
 }
 
 /* 人民币符号 */

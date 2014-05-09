@@ -2,7 +2,8 @@
  * alice.base样式模块
  * Alice_ResetCss
  * @author Alice
- * @copyright 亡鱼
+ * @copyleft 亡鱼
+ * @version V0.3 2014-05-09-17:42 亡鱼 删除颜色与字体属性，不同项目具体需求不同，多次渲染实属无聊。
  * @version V0.2 2014-04-20-16:09 亡鱼 增加大小不定元素垂直居中与绝对定位隐藏(来自zhangxinxu/quickLayout)
  * @version V0.1 2014-04-17-12:00 亡鱼 增加chrome下input:focus会有黄色边框的问题
  */
@@ -30,7 +31,7 @@ audio,canvas,video {
 }
 
 /* 要注意表单元素并不继承父级 font 的问题 */
-body,button,input,select,textarea {
+button,input,select,textarea {
     font:12px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
 }
 input,select,textarea {
@@ -82,12 +83,6 @@ caption,th {
     text-align:left;
 }
 
-/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
-h1,h2,h3,h4,h5,h6 {
-    font-size:100%;
-    font-weight:500;
-}
-
 q:before,q:after {
     content:'';
 }
@@ -99,14 +94,8 @@ sub, sup {
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-/* 正常链接 未访问 */
-a:link {
-    color: #08c;
-}
-
 /* 鼠标悬停 */
 a:hover {
-    color: #08c;
     text-decoration: underline;
 }
 

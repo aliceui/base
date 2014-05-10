@@ -3,6 +3,7 @@
  * Alice_ResetCss
  * @author Alice
  * @copyleft 亡鱼
+ * @version V0.4 2014-05-10-19:42 亡鱼 根据新型浏览器与大牛的Reset重新定制了适合自己的Reset；移除功能类到base.css。
  * @version V0.3 2014-05-09-17:42 亡鱼 删除颜色与字体属性，不同项目具体需求不同，多次渲染实属无聊。
  * @version V0.2 2014-04-20-16:09 亡鱼 增加大小不定元素垂直居中与绝对定位隐藏(来自zhangxinxu/quickLayout)
  * @version V0.1 2014-04-17-12:00 亡鱼 增加chrome下input:focus会有黄色边框的问题
@@ -10,198 +11,117 @@
 
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
-    color:#000;background:#fff;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+	color: #333;
+	background-color: #fff;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/* 设置字体 */
+body {
+	font-size: 12px;
+	line-height: 1.5;
 }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-    margin:0;padding:0;
+	margin:0;padding:0;
 }
 
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
-    display:block;
+	display:block;
 }
 
 /* HTML5 媒体文件跟 img 保持一致 */
 audio,canvas,video {
-    display: inline-block;*display: inline;*zoom: 1;
+	display: inline-block;*display: inline;*zoom: 1;
 }
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 button,input,select,textarea {
-    font:12px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+	font-family:inherit;
 }
-input,select,textarea {
-    font-size:100%;
+button,input,select,textarea {
+	font-size:100%;
 }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {
-    border-collapse:collapse;border-spacing:0;
+	border-collapse:collapse;border-spacing:0;
 }
 
 /* IE bug fixed: th 不继承 text-align*/
 th {
-    text-align:inherit;
+	text-align:inherit;
 }
 
 /* 去除默认边框 */
 fieldset,img {
-    border:0;
+	border:0;
 }
 
 /* ie6 7 8(q) bug 显示为行内表现 */
 iframe {
-    display:block;
+	display:block;
 }
 
 /* 去掉 firefox 下此元素的边框 */
 abbr,acronym {
-    border:0;font-variant:normal;
+	border:0;font-variant:normal;
 }
 
 /* 一致的 del 样式 */
 del {
-    text-decoration:line-through;
+	text-decoration:line-through;
 }
 
 address,caption,cite,code,dfn,em,th,var {
-    font-style:normal;
-    font-weight:500;
+	font-style:normal;
+	font-weight:500;
 }
 
 /* 去掉列表前的标识, li 会继承 */
 ol,ul {
-    list-style:none;
+	list-style-type:none;
 }
 
 /* 对齐是排版最重要的因素, 别让什么都居中 */
 caption,th {
-    text-align:left;
+	text-align:left;
 }
 
 q:before,q:after {
-    content:'';
+	content:'';
 }
 
 /* 统一上标和下标 */
 sub, sup {
-    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+	font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
 }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
 /* 鼠标悬停 */
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
+}
+
+/* chrome下input:focus会有黄色边框的问题 */
+input:active,input:focus,
+a:active,a:focus,
+button:active,button:focus,
+textarea:active,textarea:focus {
+	outline:none!important;
 }
 
 /* 默认不显示下划线，保持页面简洁 */
 ins,a {
-    text-decoration:none;
+	text-decoration:none;
 }
 
 /* 代码字体 */
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    font-size: 1em;
-}
-
-/* 清理浮动 */
-.fn_clear:after {
-    visibility:hidden;
-    display:block;
-    font-size:0;
-    content:" ";
-    clear:both;
-    height:0;
-}
-.fn_clear {
-    zoom:1; /* for IE6 IE7 */
-}
-
-/* 隐藏, 通常用来与 JS 配合 */
-.fn_hide {
-    display:none;
-}
-
-/* 设置内联, 减少浮动带来的bug */
-.fn_left,
-.fn_right {
-    display:inline;
-}
-.fn_left {
-    float:left;
-}
-.fn_right {
-    float:right;
-}
-
-/* 单行文字溢出时出现省略号，需设定宽度 */ 
-.fn_text_overflow {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/* 简单的渐变 */
-.fn_linear {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
-    background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
-    background:-o-linear-gradient(top, #fcfcfc, #f1f1f1);
-    background:-ms-linear-gradient(top, #fcfcfc, #f1f1f1);
-    background: linear-gradient(to bottom, #fcfcfc, #f1f1f1);
-}
-
-/* 浅色的渐变 */
-.fn_linear_light {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9));
-    background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
-    background:-o-linear-gradient(top, #fcfcfc, #f9f9f9);
-    background:-ms-linear-gradient(top, #fcfcfc, #f9f9f9);
-    background: linear-gradient(to bottom, #fcfcfc, #f9f9f9);
-}
-
-/* 人民币符号 */
-.fn_rmb {
-    font-family: arial;
-    font-style: normal;
-    padding-right: 4px;
-}
-
-/* chrome下字体过小的问题 */
-.fn_webkit_adjust {
-    -webkit-text-size-adjust: none;
-}
-
-/* chrome下input:focus会有黄色边框的问题 */
-input,a,button,textarea {
-    outline:none!important;
-}
-
-/* 大小不定元素垂直居中(来自zhangxinxu/quickLayout) */
-.fn_vm {
-	display: inline-block;
-	width: 0;
-	height: 100%;
-	vertical-align: middle;
-}
-
-/* 绝对定位隐藏(来自zhangxinxu/quickLayout) */
-.fn_abs_out {
-	position: absolute;
-	left: -999em;
-	top: -999em;
-}
-.fn_abs_clip {
-	position: absolute;
-	clip: rect(0 0 0 0);
+code,kbd,pre,samp {
+	font-family: monospace, serif;
+	font-size: 1em;
 }

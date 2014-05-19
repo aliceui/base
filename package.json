@@ -1,21 +1,18 @@
 {
-    "name": "base",
-    "version": "1.0.2",
-    "family": "alice",
-    "description": "支付宝全局 reset 样式",
-    "homepage": "http://aliceui.org/base",
-    "author": "",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/aliceui/base"
-    },
-    "bugs": {
-        "url": "https://github.com/aliceui/base/issues"
-    },
-    "license": "MIT",
-    "spm": {
-        "alias": {
-        },
-        "output": ["base.css"]
-    }
+  "name": "alice-base",
+  "version": "1.1.0",
+  "description": "支付宝全局 reset 样式",
+  "homepage": "http://aliceui.org/base",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliceui/base"
+  },
+  "bugs": {
+    "url": "https://github.com/aliceui/base/issues"
+  },
+  "license": "MIT",
+  "spm": {
+    "main": "src/base.css"
+  }
 }

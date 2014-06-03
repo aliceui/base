@@ -131,7 +131,7 @@ samp {
 }
 
 /* 隐藏, 通常用来与 JS 配合 */
-.fn-hide {
+body .fn-hide {
     display:none;
 }
 

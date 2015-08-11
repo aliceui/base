@@ -12,6 +12,7 @@ Thumbs.db
 .project
 .*proj
 .svn/
+dist/
 *.swp
 *.swo
 *.pyc

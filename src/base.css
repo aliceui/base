@@ -94,12 +94,12 @@ sub { bottom: -0.25em; }
 
 /* 正常链接 未访问 */
 a:link {
-    color: #08c;
+    color: #0ae;
 }
 
 /* 鼠标悬停 */
 a:hover {
-    color: #08c;
+    color: #0ae;
     text-decoration: underline;
 }
 
